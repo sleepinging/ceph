@@ -80,7 +80,7 @@ struct ceph_msgr_reply_io {
 
 static void *str_to_ptr(const std::string &str)
 {
-  return (void *)strtoul(str.c_str(), NULL, 16);
+  return (void *)strtoull(str.c_str(), NULL, 16);
 }
 
 static std::string ptr_to_str(void *ptr)
